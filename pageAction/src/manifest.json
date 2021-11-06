@@ -2,10 +2,11 @@
   "name": "iResume",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "A  Extension",
+  "description": "A Smart Resume Extension",
   "icons": {
     "16": "icons/icon-16.png",
     "128": "icons/icon-128.png"
+    
   },
   "background": {
     "page": "background.html"
