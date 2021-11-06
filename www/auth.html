@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  </head>
+  <body>
+
+    <!-- Google auth -->
+
+    <script type="module">
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCUTlIM6-wp4dwE33gyROxVbBI87Od45WM",
+        authDomain: "codebreakers2021.firebaseapp.com",
+        projectId: "codebreakers2021",
+        storageBucket: "codebreakers2021.appspot.com",
+        messagingSenderId: "355436022438",
+        appId: "1:355436022438:web:026d246e675d3a46b68267",
+        measurementId: "G-ELX3PBPY5R"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      import { GoogleAuthProvider } from "firebase/auth";
+
+      const provider = new GoogleAuthProvider();
+      provider.addScope("https://www.googleapis.com/auth/documents");
+
+      import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
+      const auth = getAuth();
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const token = credential.accessToken;
+          const user = result.user;
+        }).catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          const email = error.email;
+          const credential = GoogleAuthProvider.credentialFromError(error);
+        });
+
+    </script>
+
+    <!-- END OF Google auth -->
+
+  </body>
+</html>
