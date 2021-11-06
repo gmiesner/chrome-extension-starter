@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
   margin: 0;
   background-color: #17182f;
@@ -43,6 +45,61 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: -1; 
 }
 
 /* ---- END OF particles.js container ---- */
+
+#sign-in {
+  text-align: center;
+}
+
+#inputs{
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+#inputs h1, #inputs h2, #inputs h3, #inputs label, h1{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+#inputs h1, h1{
+    font-size: 4rem;
+}
+
+#inputs h2{
+    font-size: 3rem;
+
+}
+
+#inputs button, button{
+  font-size: 2rem;
+  border: none; 
+  background-color: #67B5EE;
+  border-radius: 5%;
+  padding: 1rem;
+
+}
+ 
+#inputs #company, #inputs #title, #inputs #date, #inputs #action, #inputs #another{
+  display: none;
+}
+
+#inputs input, #inputs label{
+  font-size: 2rem;
+}
+
+#inputs input{
+  width: 50%;
+}
+
+#inputs #present{
+  width: 5%;
+}
+
+#inputs #start, #inputs #end{
+  width: 25%;
+}

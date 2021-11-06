@@ -3,8 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+
     <title>replit</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- start of code needed for Google Sign-In integration -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+    <meta name="google-signin-client_id" content="355436022438-6dh8emh5gfva52qdml9v3jbilenciudk.apps.googleusercontent.com">
+     <script src="js/googleAuth.js"></script>
+      <!-- end of code needed for Google Sign-In integration -->
   </head>
   <body>
 
@@ -14,21 +20,27 @@
 
       <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
       <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-      <script src="js/script.js"></script>
+      <script src="js/spaceBackground.js"></script>
 
     <!-- END OF particles.js container -->
+    <!-- start of google sign in button -->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <!-- end of google sign in button -->
 
     <!-- logo -->
-
       <img src="images/truman_astronaut2.png" alt="Resume Space Logo" width="500" height="500" class="logo" id="truman">
 
     <!-- END OF logo -->
 
+
+
     <!-- start button -->
 
-      <button onclick="auth.html" class="button">Let's get started!</button>
+      <button onclick="location.href='auth.html'" class="button">Let's get started!</button>
       
     <!-- END OF start button -->
+
+    <a href="app.html">Bypass</a>
 
   </body>
 </html>

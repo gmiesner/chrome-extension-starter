@@ -1,0 +1,103 @@
+<div id = "college"  class = "question">
+      <h1>Where did you degree from?</h1>
+  <input type="text" placeholder="University of Missouri - Columbia">
+  <br> <br>
+  <button onclick="show('college', 'degree')">next →</button>
+    </div>
+    <div class = "question" id = "degree">
+       <h1>What is the name of your degree?</h1>
+  <input type="text" placeholder="Computer Science">
+  <br> <br>
+  <button onclick="show('degree', 'date')">next →</button>
+    </div>
+    <div id = "date">
+    <h1>When did you get your degree?</h1>
+  <input type="month" id = "degreeTime">
+  <br>
+  <br>
+<input type="checkbox" name = "present" id = "present" onclick = "present()">
+<label for="present">I have not graduated yet.</label>
+  <br> <br>
+   <button onclick="show('date', 'GPA')">next →</button>
+    </div>
+    <div id = "GPA">
+      <h1>What is your GPA?</h1>
+      <input type="text" placeholder="3.85">
+  <br> <br>
+  <button onclick="show('GPA', 'another')">next →</button>
+    </div>
+  <div id = "another">
+    <h1>Do you have another degree to enter?</h1>
+    <button onclick="show('another', 'degree')">yes </button>
+    <button onclick="show('action', '')">no </button>
+  </div>
+
+
+<div id = "certificates"  class = "question">
+      <h1>What is the name of your certificate?</h1>
+  <input type="text" placeholder="Front End Web Development">
+  <br> <br>
+  <button onclick="show('certificates', 'issuer')">next →</button>
+    </div>
+    <div class = "question" id = "issuer">
+       <h1>Who issued your certificate?</h1>
+  <input type="text" placeholder="W3">
+  <br> <br>
+  <button onclick="show('issuer', 'certificateTime')">next →</button>
+    </div>
+    <div id = "certificateTime">
+    <h1>When did you get your degree?</h1>
+  <input type="year" id = "certificateYear">
+  <br>
+  <br>
+<input type="checkbox" name = "present" id = "present" onclick = "present()">
+<label for="present">I am still working on this certificate.</label>
+  <br> <br>
+   <button onclick="show('certificateYear', 'another')">next →</button>
+    </div>
+  <div id = "another">
+    <h1>Do you have another degree to enter?</h1>
+    <button onclick="show('another', 'certificate')">yes </button>
+    <button onclick="show('action', '')">no </button>
+  </div>
+
+
+
+  <div id = "skills"  class = "question">
+      <h1>Name a relavent skill that you have</h1>
+  <input type="text" placeholder="HTML5, Linux, Unity">
+  <br> <br>
+  <button onclick="show('skills', 'another')">next →</button>
+    </div>
+  <div id = "another">
+    <h1>Do you have another degree to enter?</h1>
+    <button onclick="show('another', 'certificate')">yes </button>
+    <button onclick="show('action', '')">no </button>
+  </div>
+
+
+
+<div id = "objective"  class = "question">
+      <h1>What type of job do you want?</h1>
+  <input type="text" placeholder="entry level IT position at Microsoft">
+  <br> <br>
+  <button onclick="show('objective', 'bio')">next →</button>
+    </div>
+    <div class = "question" id = "bio">
+       <h1>How would you describe yourself as a professional?</h1>
+  <input type="text" placeholder="Junior IT Specialist">
+  <br> <br>
+  <button onclick="show('bio', 'totalExperience')">next →</button>
+    </div>
+    <div id = "totalExpeience">
+    <h1>How long have you been working in your field</h1>
+  <input type="text" id = "2 years">
+  <br> <br>
+   <button onclick="show('totalExperience', 'expert')">next →</button>
+    </div>
+    <div class = "question" id = "expert">
+       <h1>List everything you are an expert in</h1>
+  <input type="text" placeholder="full-stack development, content writing, and UX design">
+  <br> <br>
+  <button onclick="show('action', '')">done</button>
+    </div>
