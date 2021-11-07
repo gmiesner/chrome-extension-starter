@@ -1,10 +1,5 @@
 
 
-function clearBody() {
-  window.alert("sup");
-  document.body.innerHTML = '';
-}
-
 
 // function showResume(current, new_div) {
 //     if(current === skills) {
@@ -16,7 +11,15 @@ function clearBody() {
 // }
 
 function resume(){
-
+  console.log("Projects = ")
+  console.log(projects);
+  console.log("Jobs = ")
+  console.log(jobs);
+  console.log("Education = ")
+  console.log(education);
+  console.log("Skills = ")
+  console.log(skills);
+  
   var name_span = document.getElementById("span_name");
 
   var school_span = document.getElementById("span_school");
@@ -34,25 +37,46 @@ function resume(){
   var projectDescription_span = document.getElementById("span_project_description");
 
   var skills_span = document.getElementById("span_skills");
-
+  
 
   var name_string = document.createTextNode(name);
 
-  var school_string = document.createTextNode(education['school']);
-  var major_string = document.createTextNode(education['major']);
-  var degreeDate_string = document.createTextNode(education['degree_date']);
-  var grade_string = document.createTextNode(education['GPA']);
+  var school_string = document.createTextNode(school);
+  var major_string = document.createTextNode(major);
+  var degreeDate_string = document.createTextNode(degreeDate);
   
-  var company_string = document.createTextNode(jobs['company']);
-  var title_string = document.createTextNode(jobs['title']);
-  var companyDate_string = document.createTextNode(jobs['date']);
-  var action_string = document.createTextNode(jobs['action']);
+  var grade_string = document.createTextNode(grade);
 
-  var projectName_string = document.createTextNode(projects['name']);
-  var projectTechnologies_string = document.createTextNode(projects['technologies']);
-  var projectDescription_string = document.createTextNode(projects['description']);
+  
+  var company_string = document.createTextNode(company);
+  var title_string = document.createTextNode(title);
+  var companyDate_string = document.createTextNode(companyDate);
+  var action_string = document.createTextNode(action);
+
+  var projectName_string = document.createTextNode(projectName);
+  var projectTechnologies_string = document.createTextNode(projectTechnologies);
+  var projectDescription_string = document.createTextNode(projectDescription);
 
   var skills_string = document.createTextNode(skills[0]);
+  
+
+  name_span.innerHTML = "";
+
+  school_span.innerHTML = "";
+  major_span.innerHTML = "";
+  degreeDate_span.innerHTML = "";
+  grade_span.innerHTML = "";
+  
+  company_span.innerHTML = "";
+  title_span.innerHTML = "";
+  companyDate_span.innerHTML = "";
+  action_span.innerHTML = "";
+
+  projectName_span.innerHTML = "";
+  projectTechnologies_span.innerHTML = "";
+  projectDescription_span.innerHTML = "";
+
+  skills_span.innerHTML = "";
 
 
   name_span.appendChild(name_string);
@@ -67,11 +91,12 @@ function resume(){
   companyDate_span.appendChild(companyDate_string);
   action_span.appendChild(action_string);
 
-  projectName_span.appendChild(projectDescription_string);
+  projectName_span.appendChild(projectName_string);
   projectTechnologies_span.appendChild(projectTechnologies_string);
   projectDescription_span.appendChild(projectDescription_string);
 
   skills_span.appendChild(skills_string);
 
 }
+
 
