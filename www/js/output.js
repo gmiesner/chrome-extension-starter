@@ -1,19 +1,19 @@
 
 
 function clearBody() {
+  window.alert("sup");
   document.body.innerHTML = '';
 }
 
 
-function show(current, new_div) {
-    clearBody();
-    if(new_div === 'resume1')
-    resume();
-    document.getElementById(current).style.display = "none"
-    document.getElementById(new_div).style.display = "block"
-}
-
-
+// function showResume(current, new_div) {
+//     if(current === skills) {
+//         clearBody();
+//         resume();
+//         document.getElementById(current).style.display = "none"
+//         document.getElementById(new_div).style.display = "block"
+//     } 
+// }
 
 function resume(){
 
