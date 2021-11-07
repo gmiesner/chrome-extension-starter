@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+   body {
+        background-color: red;
+      }
+      #page {
+        background-color: white;
+        height: 600px;
+        width: 500px;
+        font-family: 'EB Garamond', serif;
+      }
+
+      #nameResume{
+        font-size: 2rem;
+        text-align: center;
+        color: #B89948;
+      }
+
+      #education, #jobs, #projects, #skillsResume{
+        margin-left: .5rem;
+        margin-right: .5rem;
+      }
+
+      h3{
+        color: #B89948;
+        font-style: italic;
+      }
+
+  .rectangle {
+  height: 5px;
+  width: 75px;
+  background-color: #B89948;
+  margin-top: .65rem;
+  margin-right: 1rem;
+
+}
+
+.item_heading{
+  display: flex;
+  flex-direction: row;
+}
+
+.GPA{
+  margin-left: 2rem;
+}

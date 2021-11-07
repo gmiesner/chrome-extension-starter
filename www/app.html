@@ -1,69 +1,171 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>replit</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <!-- particles.js container --> 
-<div id="particles-js"></div>
 
-<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/spaceBackground.js"></script>
-    <script src="js/questions.js"></script>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ResumeSpace</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" href="images/icon-16.png" type="image/jpg" sizes="16x16">
+</head>
 
-  <div id = "inputs">
-    <div id = "open">
-    <h1>Welcome to ResumeSpace!</h1>
-    <h2>Let's make you a resume that's out of this world.</h2>
-  <button onclick = "show('open', 'company')"> Let's get Started →</button>
+<body>
+	<!-- particles.js container -->
+	<div id="particles-js"></div>
+
+	<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+	</script>
+	<script src="js/spaceBackground.js">
+	</script>
+	<script src="js/jobs.js">
+	</script>
+	<script src="js/education.js">
+	</script>
+	<script src="js/output.js">
+	</script>
+	<script src="js/projectsSkills.js">
+	</script>
+
+
+	<div id="inputs">
+		<div id="open">
+			<h1>Welcome to ResumeSpace!</h1>
+			<h2>Let's make you a resume that's out of this world.</h2>
+			<button onclick = "show('open', 'name')"> Prepare for Liftoff →</button>
     </div>
 
+  <div id = "name">
+      <h1>What's your name?</h1>
+  <input type="text" placeholder="Truman Tiger" id = "name_text" required>
+  <br> <br>
+  <button onclick="show('name', 'company')">next →</button>
+  </div>
     <div id = "company"  class = "question">
       <h1>Where did you work?</h1>
-  <input type="text" placeholder="TigerTech" id = "company_text">
+  <input type="text" placeholder="TigerTech" id = "company_text" required>
   <br> <br>
   <button onclick="show('company', 'title')">next →</button>
     </div>
     <div class = "question" id = "title">
        <h1>What was your title?</h1>
-  <input type="text" placeholder="Sales Person" id = "title_text">
+  <input type="text" placeholder="Sales Person" id = "title_text" required>
   <br> <br>
   <button onclick="show('title', 'date')">next →</button>
     </div>
     <div id = "date">
     <h1>When did you work there?</h1>
-  <input type="month" id = "start" >
+  <input type="month" id = "start" required>
   <br>
   <br>
-  <input type="month" id = "end" >
+  <input type="month" id = "end" required>
   <br>
   <br>
-<input type="checkbox" name = "present" id = "present" onclick = "present()">
+<input type="checkbox" name = "present" id = "present" onclick = "present()" required>
 <label for="present">I currently work here.</label>
   <br> <br>
    <button onclick="show('date', 'action')">next →</button>
     </div>
     <div id = "action">
       <h1>What did you do?</h1>
-      <input type="text" placeholder="Sold laptops, iPads, and textbooks" id = "action_text">
+      <input type="text" placeholder="Sold laptops, iPads, and textbooks" id = "action_text" required>
   <br> <br>
   <button onclick="show('action', 'another',)">next →</button>
     </div>
   <div id = "another">
     <h1>Do you have another job to enter?</h1>
     <button onclick="show('another', 'company')">yes </button>
-    <button onclick="show('open', 'nextcategory')">no </button>
+    <button onclick="show('another', 'school')">no </button>
     </div>
+  <div id = "school"  class = "question">
+      <h1>Where did you obtain your degree from?</h1>
+  <input type="text" placeholder="University of Missouri - Columbia" id = "school_text" required>
+  <br> <br>
+  <button onclick="show('school', 'major')">next →</button>
+    </div>
+    <div class = "question" id = "major">
+       <h1>What is the name of your degree?</h1>
+  <input type="text" placeholder="Computer Science" id = "major_text" required>
+  <br> <br>
+  <button onclick="show('major', 'degree_date')">next →</button>
+    </div>
+ <div id = "degree_date">
+    <h1>When did you (or when are you expected to) graduate with your degree?</h1>
+  <input type="month" id = "degree_date_text" required>
+  <br>
+  <br>
+<br> <br>
+   <button onclick="show('degree_date', 'GPA')">next →</button>
+    </div>
+<div id = "GPA">
+      <h1>What is your GPA?</h1>
+      <input type="text" placeholder="3.85" id = "grade_text" required>
+  <br> <br>
+  <button onclick="show('GPA', 'another_education')">next →</button>
+    </div>
+      <div id = "another_education">
+    <h1>Do you have another degree to enter?</h1>
+    <button onclick="show('another_education', 'school')">yes </button>
+    <button onclick="show('another_education', 'project_name')">no </button>
   </div>
+  <div id = "project_name">
+      <h1>What is the name of your project?</h1>
+      <input type="text" placeholder="ResumeSpace" id = "project_name_text" required>
+  <br> <br>
+  <button onclick="show('project_name', 'project_technologies')">next →</button>
     </div>
+    <div id = "project_technologies">
+      <h1>What technologies did you use to create this project?</h1>
+      <input type="text" placeholder="HTML, CSS, JavaScript" id = "project_technologies_text" required>
+  <br> <br>
+  <button onclick="show('project_technologies', 'project_description')">next →</button>
+    </div>
+    <div id = "project_description">
+      <h1>Describe your project.</h1>
+      <input type="text" placeholder="A smart resume generator web application." id = "project_description_text" required>
+  <br> <br>
+  <button onclick="show('project_description', 'another_project')">next →</button>
+    </div>
+   <div id = "another_project">
+    <h1>Do you have another project to enter?</h1>
+    <button onclick="show('another_project', 'project_name')">yes </button>
+    <button onclick="show('another_project', 'skills')">no </button>
+  </div>
+   <div id = "skills">
+      <h1>Enter a skill you have.</h1>
+      <input type="text" placeholder="HTML" id = "skills_text" required>
+  <br> <br>
+  <button onclick="clearBody()">next →</button>
+    </div>
+  </div> 
+  <div id="resume1">
+      <div id="page">
+          <div id = "nameResume"><span id="span_name">Truman Tiger</span></div>
+          <div id = "education">
+            <h3 class = "item_heading"><section class="rectangle"></section><u>Education</u></h3> 
+            <div><b>School: </b><span id="span_school">University of Missouri</span></div>
+            <div><b>Major: </b><span id="span_major">Bachelor's in Information Technology</span></div>
+            <div><b>GPA: </b><span id="span_GPA">3.4/4.0</span></div>
+            <div><b>Expected Graduation: </b><span id="span_degree_date">11-05-2021</span></div>
+          </div>
+          <div id = "jobs">
+             <h3 class = "item_heading"><section class="rectangle"></section><u>Jobs</u></h3> 
+               <div><b>Company: </b><span id="span_company">TigerTech</span></div>
+               <div><b>Title: </b><span id="span_title">Sales Person</span></div>
+               <div><b>Description: </b><span id="span_action">Sold laptops, iPads, and textbooks</span></div>
+               <div><b>Date: </b><span id="span_company_date">11-05-2021</span></div>
+          </div>
+           <div id = "projects">
+             <h3 class = "item_heading"><section class="rectangle"></section><u>Projects</u></h3> 
+               <div><b>Project Name: </b><span id="span_project_name">ResumeSpace</span></div>
+               <div><b>Technologies: </b><span id="span_project_technologies">HTML, CSS, JavaScript</span></div>
+               <div><b>Description: </b><span id="span_project_description">A smart resume generator web application.</span></div>
+          </div>
+          <div id = "skillsResume">
+             <h3 class = "item_heading"><section class="rectangle"></section><u>Skills</u></h3> 
+               <div><b>Skills: </b><span id="span_skills">JavaScript</span></div>
+          </div>
+      </div>
+      </div>
   </body>
 </html>
-
-
-
-
-

@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 
-    <title>replit</title>
+    <title>ResumeSpace</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+      <link rel="icon" href="images/icon-16.png" type="image/jpg" sizes="16x16">
     <!-- start of code needed for Google Sign-In integration -->
 <script src="https://accounts.google.com/gsi/client" async defer></script>
     <meta name="google-signin-client_id" content="355436022438-6dh8emh5gfva52qdml9v3jbilenciudk.apps.googleusercontent.com">
@@ -23,12 +24,42 @@
       <script src="js/spaceBackground.js"></script>
 
     <!-- END OF particles.js container -->
+
     <!-- start of google sign in button -->
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <!-- end of google sign in button -->
 
     <!-- logo -->
-      <img src="images/truman_astronaut2.png" alt="Resume Space Logo" width="500" height="500" class="logo" id="truman">
+
+      <img src="images/truman_astronaut2.png" alt="Resume Space Logo" width="750" height="750" class="logo" id="truman">
+
+      <script type="text/javascript">
+        
+        function fadeIn(el) {
+        el.style.opacity = 0;
+        var tick = function () {
+        el.style.opacity = +el.style.opacity + 0.01;
+        if (+el.style.opacity < 1) {
+            (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 1)
+          }
+        };
+        tick();
+      }
+
+      function myFunction() {
+        var el = document.getElementById("truman");
+        console.log(el);
+        fadeIn(el);
+        setTimeout(function(){
+          window.location.href = "app.html";
+        }, 4000);
+      }
+        
+      window.onload = myFunction();
+
+      </script>
+
+      
 
     <!-- END OF logo -->
 
@@ -36,11 +67,9 @@
 
     <!-- start button -->
 
-      <button onclick="location.href='auth.html'" class="button">Let's get started!</button>
-      
-    <!-- END OF start button -->
+      <!--<button onclick="location.href='app.html'" class="button">Let's get started!</button> -->
 
-    <a href="app.html">Bypass</a>
+    <!-- END OF start button -->
 
   </body>
 </html>

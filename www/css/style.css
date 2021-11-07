@@ -84,7 +84,7 @@ canvas {
 
 }
  
-#inputs #company, #inputs #title, #inputs #date, #inputs #action, #inputs #another{
+#inputs #company, #inputs #title, #inputs #date, #inputs #action, #inputs #another, #inputs #school, #inputs #major, #inputs #degree_date, #inputs #GPA, #inputs #another_education, #inputs #name #resume1, #inputs #name, #inputs #project_name, #inputs #project_description, #inputs #project_technologies, #inputs #another_project, #inputs #skills, #resume1 {
   display: none;
 }
 
